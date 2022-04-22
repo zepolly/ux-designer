@@ -1,0 +1,63 @@
+.social {
+  text-align: center;
+  margin-top: -100px;
+}
+
+.social__list {
+  width: 291px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__quot {
+  margin-top: 120px;
+  position: relative;
+}
+
+.social__quot-text {
+  width: 960px;
+  margin: 0 auto;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.social__quot-text::before, .social__quot-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/sign.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 41px;
+  height: 128px;
+}
+
+.social__quot-text::before {
+  left: 15%;
+  top: -40px;
+}
+
+.social__quot-text::after {
+  right: 15%;
+  bottom: 50px;
+  transform: rotate(180deg);
+}
+
+.social__quot-autor {
+  position: relative;
+  color: @red;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 50%;
+  margin-top: 30px;
+}
+
+.social__quot-sign {
+  color: @white;
+  font-size: 28px;
+}

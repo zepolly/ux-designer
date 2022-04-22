@@ -1,0 +1,34 @@
+.arts {
+  position: relative;
+  margin-top: 200px;
+}
+
+.arts__title {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 43px;
+  border-bottom: 2px solid @red;
+  width: 190px;
+  padding-bottom: 8px;
+}
+
+.arts__img {
+  margin-top: 70px;
+}
+
+.arts::before, .arts::after {
+  content: "";
+  position: absolute;
+  background-color: @red;
+  bottom: 150px;
+  width: 158px;
+  height: 488px;
+}
+
+.arts::before {
+  left: 0;
+}
+
+.arts::after {
+  right: 0;
+}
