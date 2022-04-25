@@ -38,7 +38,8 @@
     "*.js",
     "source/*.html",
     "source/img/**/*.svg",
-    "source/less/**/*.less"
+    "source/less/**/*.less",
+    "source/video/*.mp4"
   ],
   "engines": {
     "node": "14.15.0"

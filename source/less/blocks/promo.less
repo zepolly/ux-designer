@@ -1,18 +1,27 @@
 .promo {
   text-align: center;
   position: relative;
-  background-image: url("../img/background.png");
-  background-size: 100% 100%;
-  background-position: 20px;
+  z-index: 2;
+}
+
+.promo__video {
+  position: absolute;
+  z-index: 1;
+  top: -127px;
+  left: -50px;
+  width: 1920px;
+  height: 1024px;
 }
 
 .promo__wrap {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 3;
 }
 
 .promo__title {
-  margin-top: 10px;
+  margin-top: 0;
   font-weight: 900;
   font-size: 200px;
   line-height: 240px;
@@ -22,8 +31,9 @@
 
 .promo__title-description {
   text-align: right;
+  margin-top: -30px;
 }
 
 .promo__img {
-  margin-top: -150px;
+  margin-top: -170px;
 }
