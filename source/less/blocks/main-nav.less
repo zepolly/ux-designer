@@ -1,6 +1,86 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  z-index: 2;
+  display: block;
+  width: 35px;
+  height: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 2px;
+  background-color: @white;
+  box-shadow: 0 8px 0 0 @white, 0 16px 0 0 @white;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 35px;
+    height: 1px;
+    background-color: @white;
+    box-shadow: none;
+  }
+
+  &::before {
+    transform: rotate(25deg);
+  }
+
+  &::after {
+    transform: rotate(-25deg);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+}
+
 .main-nav__list {
+  position: absolute;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: @red;
+  color: @white;
+  font-size: 24px;
+  line-height: 52px;
+  text-align: right;
+  right: 0;
+  width: 150px;
+  top: 15px;
+  z-index: 3;
+
+  @media (min-width: @desktop-width) {
   display: flex;
   color: @white;
+  background-color: transparent;
   flex-direction: row;
   justify-content: space-between;
   padding: 0;
@@ -8,6 +88,7 @@
   font-size: 18px;
   line-height: 25px;
   width: 915px;
+  }
 }
 
 .main-nav__item-line {
@@ -18,12 +99,20 @@
 }
 
 .main-nav__item-tel {
-  display: block;
-  margin-top: -18px;
-  background-color: @red;
-  padding: 18px 76px 20px 76px;
-  border-radius: 60px;
-  text-align: center;
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-right: -80px;
+    margin-top: -18px;
+    padding: 18px 76px 20px 76px;
+    background-color: @red;
+    border-radius: 60px;
+    text-align: center;
+    color: @white;
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 .main-nav__item-tel:hover,
@@ -32,11 +121,23 @@
   background-color: @red-light;
 }
 
-.main-nav__item:hover,
-.main-nav__item:focus,
-.main-nav__item:active {
-  border-bottom: 2px solid @red;
-  width: 80px;
-  padding-bottom: 8px;
+@media (min-width: @desktop-width) {
+  .main-nav__item:hover,
+  .main-nav__item:focus,
+  .main-nav__item:active {
+    border-bottom: 2px solid @red;
+    width: 80px;
+    padding-bottom: 8px;
+  }
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-nav__tel {
+    position: absolute;
+    top: -27px;
+    right: 70px;
+    background-image: url("../img/phone.png");
+    width: 23px;
+    height: 23px;
+  }
+}

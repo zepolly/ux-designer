@@ -18,31 +18,40 @@
 
   <body class="page-body">
 
-    <header class="page-header">
-      <a href="#promo">
+    <header class="header">
+      <div class="page-header">
+        <a href="#promo">
         <picture>
           <img class="page-header__logo-image" src="img/logo.png" alt="Логотип">
         </picture>
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li>
-            <a class="main-nav__item-line">main</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#about-me">about me</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#projects">portfolio</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#contacts">contacts</a>
-          </li>
-          <li>
-            <a href="https://wa.me/79661886862" class="main-nav__item-tel">Text me</a>
-          </li>
-        </ul>
-      </nav>
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a>main</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#about-me">about me</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#projects">portfolio</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#contacts">contacts</a>
+            </li>
+            <li>
+              <a href="https://wa.me/79661886862" class="main-nav__item-tel">Get in touch</a>
+            </li>
+            <li>
+              <a href="https://wa.me/79661886862" class="main-nav__tel"></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
 
     </header>
 
@@ -61,9 +70,11 @@
             <div class="promo__wrapper">
               <h1 class="promo__title">ui/ux</h1>
               <picture>
-                <img class="promo__img" src="img/maria.png" srcset="img/maria@2x.png 2x" alt="Maria">
+                <source media="(min-width: 720px)" srcset="img/maria.png, img/maria@2x.png 2x">
+                <img class="promo__img" src="img/maria-mobile.png" srcset="img/maria-mobile@2x.png 2x" alt="Maria">
               </picture>
               <h1 class="promo__title promo__title-description">d<span class="title-letter">e</span>signer</h1>
+              <a href="https://wa.me/79661886862" class="promo__link">Get in touch</a>
             </div>
           </div>
         </div>
@@ -143,7 +154,7 @@
               <p class="about-me__text">year<br>work experience</p>
             </li>
           </ul>
-          <img src="img/star.png" width="432" alt="star">
+          <img src="img/star.png" class="about-me__img" width="432" alt="star">
         </div>
 
         <div class="info">
@@ -153,34 +164,38 @@
             <p class="info__text">I have been studying web design for more than two years. For one year I studied UI/UX design courses from Mail.ru Group, then I studied design on my own for a year. In fact, my training does not end until now. I try to constantly improve my qualifications and learn something new.</p>
             <p class="info__text">I worked in a design studio for six months, and I work freelance for six months. Now I looking for next role within an web/app or product design space to ultilise my design skills and enhance user experiences within mobile, tablet and web-based devices.</p>
             <p class="info__text">I am fond of visual art - I paint and photograph. I like to travel, read books and expand my mind.</p>
-            <a href="https://wa.me/79661886862" class="info__link">Text me</a>
+            <a href="https://wa.me/79661886862" class="info__link">Get in touch</a>
           </div>
-          <div>
+          <div class="info__wrap-img">
             <picture>
-              <img class="info__img" src="img/mary.jpg" srcset="img/mary@2x.png 2x" alt="maria" width="579">
+              <source media="(min-width: 720px)" srcset="img/mary.jpg, img/mary@2x.jpg 2x" >
+              <img class="info__img" src="img/mary-mobile.jpg" srcset="img/mary-mobile@2x.jpg 2x" alt="maria" width="579">
             </picture>
           </div>
         </div>
 
         <div class="skills">
-          <img src="img/certificate.png" width="866" alt="certificate">
+          <picture>
+            <source media="(min-width: 720px)" srcset="img/certificate.png" >
+            <img src="img/certificate-mobile.png" width="866" alt="certificate" class="skills__img">
+          </picture>
           <div class="skills__wrap">
             <h3 class="skills__title"><span class="about-me__title-letter">s</span>kills</h3>
             <ul class="skills__list">
-              <li>Figma</li>
-              <li>Photoshop</li>
-              <li>UX</li>
-              <li>Strong command of visual design capabilities,  including composition, layout information hierarchy, typography, color</li>
-              <li>Knowledge of design trends</li>
-              <li>Ability to work through ambiguity and multiple priorities, self-motivated, directed, and independent</li>
-              <li>Care about details (grid-system, pixel-perfect)</li>
-              <li>iOS Guidelines, Material Design Guidelines</li>
+              <li class="skills__item">Figma</li>
+              <li class="skills__item">Photoshop</li>
+              <li class="skills__item">UX</li>
+              <li class="skills__item">Strong command of visual design capabilities,  including composition, layout information hierarchy, typography, color</li>
+              <li class="skills__item">Knowledge of design trends</li>
+              <li class="skills__item">Ability to work through ambiguity and multiple priorities, self-motivated, directed, and independent</li>
+              <li class="skills__item">Care about details (grid-system, pixel-perfect)</li>
+              <li class="skills__item">iOS Guidelines, Material Design Guidelines</li>
             </ul>
             <h4 class="skills__subtitle">Learning now:</h4>
             <ul class="skills__list">
-              <li>Illustrator</li>
-              <li>After Effects</li>
-              <li>Cinema 4D</li>
+              <li class="skills__item-sub">Illustrator</li>
+              <li class="skills__item-sub">After Effects</li>
+              <li class="skills__item-sub">Cinema 4D</li>
             </ul>
           </div>
       </section>
@@ -191,7 +206,8 @@
           <li class="projects__item projects__item-first">
             <a href="https://www.figma.com/file/Lantcdmbmjgp9hTcwvPj8c/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B3%D0%BE">
               <picture>
-                <img class="projects__img projects__img-first" src="img/masters.png" srcset="img/masters@2x.png 2x" alt="Сайт о выставке">
+                <source media="(min-width: 720px)" srcset="img/studio.png, img/studio@2x.png 2x">
+                <img class="projects__img projects__img-first" src="img/studio-mobile.png" srcset="img/studio-mobile@2x.png 2x" alt="Сайт о выставке">
               </picture>
             </a>
             <h3 class="project__subtitle">Exhibition website with the possibility of buying a ticket</h3>
@@ -200,16 +216,28 @@
           <li class="projects__item projects__item-second">
             <a href="http://zepolly.ru/">
               <picture>
-                <img class="projects__img projects__img-first" src="img/zepolly.png" srcset="img/zepolly@2x.png 2x" width="506" alt="frontend-developer zepolly">
+                <source media="(min-width: 720px)" srcset="img/zepolly.png, img/zepolly@2x.png 2x">
+                <img class="projects__img projects__img-second" src="img/zepolly-mobile.png" srcset="img/zepolly-mobile@2x.png 2x" width="506" alt="frontend-developer zepolly">
               </picture>
             </a>
             <h3 class="project__subtitle">Portfolio site for a frontend developer</h3>
-            <a href="http://zepolly.ru/" class="project__link project__link-first">&#8594;</a>
+            <a href="http://zepolly.ru/" class="project__link project__link-second">&#8594;</a>
+          </li>
+          <li class="projects__item">
+            <a href="https://www.figma.com/file/Lantcdmbmjgp9hTcwvPj8c/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B3%D0%BE">
+              <picture>
+                <source media="(min-width: 720px)" srcset="img/masters.png, img/masters@2x.png 2x">
+                <img class="projects__img" src="img/masters-mobile.png" srcset="img/masters-mobile@2x.png 2x" alt="Сайт о выставке">
+              </picture>
+            </a>
+            <h3 class="project__subtitle">Exhibition website with the possibility of buying a ticket</h3>
+            <a href="https://www.figma.com/file/Lantcdmbmjgp9hTcwvPj8c/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B0-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B3%D0%BE" class="project__link">&#8594;</a>
           </li>
           <li class="projects__item">
             <a href="https://www.figma.com/file/7tYa4c3cq4x3b8WkSu2Zzr/%D0%A0%D1%83%D0%BC%D0%93%D1%80%D1%83%D0%BF?node-id=0%3A1">
               <picture>
-                <img class="projects__img" src="img/expert.png" srcset="img/expert@2x.png 2x" width="506" alt="RumGroup">
+                <source media="(min-width: 720px)" srcset="img/expert.png, img/expert@2x.png 2x">
+                <img class="projects__img" src="img/expert-mobile.png" srcset="img/expert-mobile@2x.png 2x" width="506" alt="RumGroup">
               </picture>
             </a>
             <h3 class="project__subtitle">The range of services of the RumGroup company</h3>
@@ -218,25 +246,18 @@
           <li class="projects__item">
             <a href="https://www.figma.com/file/WKk7NMsug61VOubCrU1tLG/%D0%A8%D1%82%D0%B8%D0%BB%D1%8C-%D1%81%D0%B0%D0%B9%D1%82">
               <picture>
-                <img class="projects__img" src="img/trees.png" srcset="img/trees@2x.png 2x" width="506" alt="Trees">
+                <source media="(min-width: 720px)" srcset="img/trees.png, img/trees@2x.png 2x">
+                <img class="projects__img" src="img/trees-mobile.png" srcset="img/trees-mobile@2x.png 2x" width="506" alt="Trees">
               </picture>
             </a>
             <h3 class="project__subtitle">Pruning of trees and rental of special equipment</h3>
             <a href="https://www.figma.com/file/WKk7NMsug61VOubCrU1tLG/%D0%A8%D1%82%D0%B8%D0%BB%D1%8C-%D1%81%D0%B0%D0%B9%D1%82" class="project__link">&#8594;</a>
           </li>
           <li class="projects__item">
-            <a href="https://www.figma.com/file/eFoZ3HJKp8FTJpc8rrnalS/Caterrus-bar">
-              <picture>
-                <img class="projects__img" src="img/bar.png" srcset="img/bar@2x.png 2x" width="506" alt="Mobile bar">
-              </picture>
-            </a>
-            <h3 class="project__subtitle">Mobile bar</h3>
-            <a href="https://www.figma.com/file/eFoZ3HJKp8FTJpc8rrnalS/Caterrus-bar" class="project__link">&#8594;</a>
-          </li>
-          <li class="projects__item">
             <a href="https://www.figma.com/file/fGcAnTj9u7qYB7MyAKAkVN/Zimmermann?node-id=0%3A1">
               <picture>
-                <img class="projects__img" src="img/shop.png" srcset="img/shop@2x.png 2x" width="506" alt="Store">
+                <source media="(min-width: 720px)" srcset="img/shop.png, img/shop@2x.png 2x">
+                <img class="projects__img" src="img/shop-mobile.png" srcset="img/shop-mobile@2x.png 2x" width="506" alt="Store">
               </picture>
             </a>
             <h3 class="project__subtitle">Online clothing store</h3>
@@ -245,7 +266,8 @@
           <li class="projects__item">
             <a href="https://www.figma.com/file/kXs4xh05fM7C8b2b4mv13E/%D0%A0%D1%83%D0%BC%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3?node-id=0%3A1">
               <picture>
-                <img class="projects__img" src="img/clean.png" srcset="img/clean@2x.png 2x" width="506" alt="Cleaning">
+                <source media="(min-width: 720px)" srcset="img/clean.png, img/clean@2x.png 2x">
+                <img class="projects__img" src="img/clean-mobile.png" srcset="img/clean-mobile@2x.png 2x" width="506" alt="Cleaning">
               </picture>
             </a>
             <h3 class="project__subtitle">Cleaning service</h3>
@@ -254,7 +276,8 @@
           <li class="projects__item">
             <a href="https://www.figma.com/file/w3kgeusnY59FWe9EZHFdBw/Untitled?node-id=0%3A1">
               <picture>
-                <img class="projects__img" src="img/template.png" srcset="img/template@2x.png 2x" width="506" alt="Decide Group">
+                <source media="(min-width: 720px)" srcset="img/template.png, img/template@2x.png 2x">
+                <img class="projects__img" src="img/template-mobile.png" srcset="img/template-mobile@2x.png 2x" width="506" alt="Decide Group">
               </picture>
             </a>
             <h3 class="project__subtitle">Template landing page for the Decide Group design studio</h3>
@@ -263,7 +286,8 @@
           <li class="projects__item">
             <a href="https://www.figma.com/file/GGzud355KTafqhvyzVP6kl/%D1%84%D1%8D%D0%BD%D1%81%D1%82%D0%B5%D1%80">
               <picture>
-                <img class="projects__img" src="img/window.png" srcset="img/window@2x.png 2x" width="506" alt="window">
+                <source media="(min-width: 720px)" srcset="img/window.png, img/window@2x.png 2x">
+                <img class="projects__img" src="img/window-mobile.png" srcset="img/window-mobile@2x.png 2x" width="506" alt="window">
               </picture>
             </a>
             <h3 class="project__subtitle">Production and installation of windows</h3>
@@ -272,7 +296,8 @@
           <li class="projects__item">
             <a href="https://www.figma.com/file/PQ49ehykaf1F5VzDEqHdbJ/%D0%9B%D0%B5-%D0%9A%D0%BE%D1%80%D0%B1%D1%8E%D0%B7%D1%8C%D0%B5">
               <picture>
-                <img class="projects__img" src="img/consept.png" srcset="img/consept@2x.png 2x" width="506" alt="consept">
+                <source media="(min-width: 720px)" srcset="img/consept.png, img/consept@2x.png 2x">
+                <img class="projects__img" src="img/consept-mobile.png" srcset="img/consept-mobile@2x.png 2x" width="506" alt="consept">
               </picture>
             </a>
             <h3 class="project__subtitle">Le Corbusier concept</h3>
@@ -287,6 +312,45 @@
           <picture>
             <img class="arts__img" src="img/arts.png" srcset="img/arts@2x.png 2x" width="1200" alt="arts">
           </picture>
+
+          <div class="arts__container">
+            <div class="arts__item">
+              <picture>
+                <img class="art__img" src="img/picture-mary.png" srcset="img/picture-mary@2x.png 2x" alt="art">
+              </picture>
+              <p>Selfportrait, 2018</p>
+            </div>
+            <div class="arts__item">
+              <picture>
+                <img class="art__img" src="img/picture-rinata.png" srcset="img/picture-rinata@2x.png 2x" alt="art">
+              </picture>
+              <p>Renata, 2021</p>
+            </div>
+            <div class="arts__item">
+              <picture>
+                <img class="art__img" src="img/picture-yana.png" srcset="img/picture-yana@2x.png 2x" alt="art">
+              </picture>
+              <p>The Lover, 2018</p>
+            </div>
+            <div class="arts__item">
+              <picture>
+                <img class="art__img" src="img/picture-woman.png" srcset="img/picture-woman@2x.png 2x" alt="art">
+              </picture>
+              <p>Red, 2021</p>
+            </div>
+            <div class="arts__item">
+              <picture>
+                <img class="art__img" src="img/picture-iana.png" srcset="img/picture-iana@2x.png 2x" alt="art">
+              </picture>
+              <p>Sight, 2019</p>
+            </div>
+            <div class="arts__item">
+              <picture>
+                <img class="art__img" src="img/picture-face.png" srcset="img/picture-face@2x.png 2x" alt="art">
+              </picture>
+              <p>Buddha, 2017</p>
+            </div>
+          </div>
         </div>
 
       </section>
@@ -303,13 +367,13 @@
               <p>ortlibmaria@gmail.com</p>
             </li>
             <li class="page-footer__item">
-              <a class="page-footer__link" href="#">Text me</a>
+              <a class="page-footer__link" href="#">Get in touch</a>
             </li>
             <li class="page-footer__item page-footer__item-list">
               <a href="https://www.instagram.com/m.ortlib/">instagram</a>
               <a href="https://www.behance.net/mariaortli37bf">behance</a>
               <a href="https://t.me/m_ortlib">telegram</a>
-              <a href="https://api.whatsapp.com/send?phone=79661886862">whatsapp</a>
+              <a href="https://wa.me/79661886862">whatsapp</a>
             </li>
           </ul>
           <ul class="page-footer__list-second">
@@ -327,6 +391,21 @@
         </div>
       </section>
     </footer>
+    <script type="text/javascript">
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
 
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

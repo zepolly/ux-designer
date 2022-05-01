@@ -1,5 +1,10 @@
 .projects {
-  margin-top: 40px;
+  margin-top: -40px;
+  margin-left: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin: 40px auto;
+  }
 }
 
 .projects__title {
@@ -12,57 +17,127 @@
 }
 
 .projects__list {
-  margin: 100px 0;
+  margin: 0 auto;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  font-size: 14px;
+  line-height: 17px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 100px 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
 }
 
 .projects__item {
   position: relative;
   background-color: @red;
+  max-width: 300px;
+
+  @media (min-width: @desktop-width) {
+    max-width: 580px;
+  }
 }
 
 .projects__img {
   margin: 35px;
 }
 
-.projects__img-first {
-  margin-top: 95px;
+@media (max-width: @mobile-width-only) {
+  .projects__img {
+    width: 253px;
+    height: 154px;
+    margin: 20px;
+  }
 }
 
-.projects__item-first, .projects__item-second {
+.projects__img-first {
+  margin-top: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 95px;
+  }
+}
+
+.projects__img-second {
+  @media (min-width: @desktop-width) {
+    margin-top: 95px;
+  }
+}
+
+.projects__item-first {
   background-image: url("../img/background-card.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-color: inherit;
-  height: 550px;
+  height: 305px;
+
+  @media (min-width: @desktop-width) {
+    height: 550px;
+    background-size: auto;
+  }
+}
+
+.projects__item-second {
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background-card.png");
+    background-repeat: no-repeat;
+    background-color: inherit;
+    height: 550px;
+    background-size: auto;
+  }
 }
 
 .project__subtitle {
-  margin: 10px 0 45px 35px;
-  font-size: 16px;
-  max-width: 315px;
+  font-size: 14px;
+  margin: 0 0 20px 20px;
+  width: 175px;
+
+  @media (min-width: @desktop-width) {
+    margin: 10px 0 45px 35px;
+    font-size: 16px;
+    width: 315px;
+  }
 }
 
 .project__link {
   display: block;
   position: absolute;
-  right: 40px;
-  bottom: 20px;
+  right: 20px;
+  bottom: 18px;
   color: @black;
-  font-size: 30px;
+  font-size: 18px;
   background-color: @white;
-  padding: 25px 20px;
+  padding: 10px;
   border-radius: 80px;
+
+  @media (min-width: @desktop-width) {
+    right: 40px;
+    bottom: 20px;
+    font-size: 30px;
+    padding: 25px 20px;
+  }
 }
 
 .project__link-first {
-  bottom: 50px;
+  bottom: 37px;
+
+  @media (min-width: @desktop-width) {
+    bottom: 50px;
+  }
+}
+
+.project__link-second {
+  @media (min-width: @desktop-width) {
+    bottom: 50px;
+  }
 }
 
 .project__link:hover,
