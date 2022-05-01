@@ -25,9 +25,10 @@
   font-size: 14px;
   line-height: 17px;
   font-weight: 400;
-
+  max-width: 300px;
 
   @media (min-width: @desktop-width) {
+    max-width: 1400px;
     font-size: 16px;
     line-height: 19px;
     margin: 100px 0;
@@ -39,11 +40,6 @@
 .projects__item {
   position: relative;
   background-color: @red;
-  max-width: 300px;
-
-  @media (min-width: @desktop-width) {
-    max-width: 580px;
-  }
 }
 
 .projects__img {

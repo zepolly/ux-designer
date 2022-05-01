@@ -101,7 +101,7 @@
   color: @red;
   position: absolute;
   bottom: 90px;
-  right: 45%;
+  right: 40%;
 
 
   @media (min-width: @desktop-width) {
@@ -135,4 +135,10 @@
 .page-footer__link-arrow:active {
   font-size: 90px;
   color: @red;
+}
+
+@media (max-width: @mobile-width-only) {
+  .page-footer__item-list {
+    width: 150px;
+  }
 }
