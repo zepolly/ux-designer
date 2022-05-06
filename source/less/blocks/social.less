@@ -7,6 +7,10 @@
   }
 }
 
+.social__container {
+  height: 70px;
+}
+
 .social__list {
   width: 300px;
   margin: 0 auto;
@@ -67,8 +71,12 @@
 
 .social__quot-text::after {
   right: 15%;
-  bottom: 50px;
+  bottom: 33px;
   transform: rotate(180deg);
+
+  @media (min-width: @desktop-width) {
+    bottom: 50px;
+  }
 }
 
 .social__quot-autor {
